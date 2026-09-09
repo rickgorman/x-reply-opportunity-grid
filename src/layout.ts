@@ -1,7 +1,7 @@
 import type { ColumnBreakpoint, Tweet } from './types';
 
 /** Preferred card floor; column count shrinks before cards go under this. */
-export const DEFAULT_MIN_CARD_WIDTH = 420;
+export const DEFAULT_MIN_CARD_WIDTH = 560;
 export const DEFAULT_GRID_GAP = 12;
 export const DEFAULT_MAIN_INLINE_PAD = 56;
 export const DEFAULT_MAX_COLUMNS = 7;

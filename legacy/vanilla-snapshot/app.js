@@ -16,7 +16,7 @@ let tweets = [];
 let interestLexicon = {};
 let visited = readVisited();
 
-const MIN_CARD_WIDTH = 420;
+const MIN_CARD_WIDTH = 560;
 const GRID_GAP = 12;
 const MAIN_INLINE_PAD = 56; // main padding 28px * 2
 const MAX_COLUMNS = 7;

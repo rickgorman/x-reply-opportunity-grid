@@ -2,7 +2,7 @@
 
 ![Reply opportunity grid preview](docs/dashboard-preview.png)
 
-A **read-only**, X-dark React component library for scanning posts worth replying to. Transparent opportunity scoring, round-robin column stacks that **preserve card width** (minCardWidth default 420), local visited state, and zero write actions against X.
+A **read-only**, X-dark React component library for scanning posts worth replying to. Transparent opportunity scoring, round-robin column stacks that **preserve card width** (minCardWidth default 560), local visited state, and zero write actions against X.
 
 **Package:** `@rickgorman/x-reply-opportunity-grid`
 **Peers:** `react` + `react-dom` (18 or 19)
@@ -53,7 +53,7 @@ npm install git+https://github.com/rickgorman/x-reply-opportunity-grid.git
 |---|---|---|---|
 | `tweets` | `readonly Tweet[]` | required | Cards to render. Input order preserved (no score sort). First duplicate id wins. |
 | `scoreOptions` | `ScoreOptions` | `{}` | Forwarded to the scorer. |
-| `minCardWidth` | `number` | `420` | Preferred card floor in CSS px. **Column count drops before cards crush under this width.** Ignored when `breakpoints` is set. |
+| `minCardWidth` | `number` | `560` | Preferred card floor in CSS px. **Column count drops before cards crush under this width.** Ignored when `breakpoints` is set. |
 | `gridGap` | `number` | `12` | Gap used by min-width fitting. |
 | `mainInlinePad` | `number` | `56` | Assumed horizontal chrome outside the grid when fitting. |
 | `maxColumns` | `number` | `7` | Cap when using min-card-width fitting. |
@@ -69,14 +69,14 @@ npm install git+https://github.com/rickgorman/x-reply-opportunity-grid.git
 
 ## Layout and minCardWidth
 
-Default behavior fits as many columns as possible without cards going under `minCardWidth` (420px):
+Default behavior fits as many columns as possible without cards going under `minCardWidth` (560px):
 
 ```text
 available = viewportWidth - mainInlinePad
 columns   = clamp(1..maxColumns, floor((available + gridGap) / (minCardWidth + gridGap)))
 ```
 
-Cards keep ~420px minimum; the grid drops columns as the viewport shrinks. Round-robin placement keeps source order (index i goes to column i % columns).
+Cards keep ~560px minimum; the grid drops columns as the viewport shrinks. Round-robin placement keeps source order (index i goes to column i % columns).
 
 Legacy breakpoints (only when you pass `breakpoints`): 2200→7 · 1800→6 · 1500→5 · 1200→4 · 900→3 · 600→2 · 0→1.
 
