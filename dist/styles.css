@@ -12,7 +12,7 @@
   --xrog-radius: 12px;
   color-scheme: dark;
   color: var(--xrog-text);
-  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 1.2rem;
   line-height: 1.4;
   font-synthesis: none;

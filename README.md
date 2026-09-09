@@ -1,27 +1,28 @@
 ![Reply opportunity grid preview](docs/dashboard-preview.png)
 
-A **read-only**, X-dark React component library for scanning posts worth replying to. Transparent opportunity scoring, round-robin column stacks that **preserve card width** (`minCardWidth` default **400**, `maxColumns` **8**), local visited state, and zero write actions against X.
+A **read-only**, dark-themed React component library for scanning posts worth replying to. Transparent opportunity scoring, round-robin column stacks that **preserve card width** (`minCardWidth` default **400**, `maxColumns` **8**), local visited state, and zero write actions against X.
 
 **Package:** `@rickgorman/x-reply-opportunity-grid`
 **Peers:** `react` + `react-dom` (18 or 19)
+**License:** MIT
 **Hard gate:** display-only. Opens x.com in a new tab. Never follow, like, reply, or DM.
+
+> **Not affiliated with X Corp / Twitter.** This is an independent, display-only UI kit. It does not use official X brand assets, fonts, or APIs. Mentions of “X” in UI copy (for example “Open on X”) are descriptive links only and do not imply endorsement.
 
 ---
 
-## Install (private GitHub)
+## Install
 
-Use Node.js **22.12+** (Node 20.19+ is also supported), Git, and access to this private repository. Authenticate Git with GitHub using your credential manager or SSH key before installing; npm registry authentication alone does not grant repository access.
-
-Install from the React package branch in your application. Choose one package manager:
+Use Node.js **22.12+** (Node 20.19+ is also supported) and Git. Choose one package manager:
 
 | Package manager | Install |
 |---|---|
-| npm | `npm install "github:rickgorman/x-reply-opportunity-grid#feat/react-package"` |
-| pnpm | `pnpm add "github:rickgorman/x-reply-opportunity-grid#feat/react-package"` |
-| Yarn | `yarn add "github:rickgorman/x-reply-opportunity-grid#feat/react-package"` |
-| Bun | `bun add "github:rickgorman/x-reply-opportunity-grid#feat/react-package"` |
+| npm | `npm install "github:rickgorman/x-reply-opportunity-grid"` |
+| pnpm | `pnpm add "github:rickgorman/x-reply-opportunity-grid"` |
+| Yarn | `yarn add "github:rickgorman/x-reply-opportunity-grid"` |
+| Bun | `bun add "github:rickgorman/x-reply-opportunity-grid"` |
 
-An explicit HTTPS dependency URL is `git+https://github.com/rickgorman/x-reply-opportunity-grid.git#feat/react-package`; for SSH, use `git+ssh://git@github.com/rickgorman/x-reply-opportunity-grid.git#feat/react-package`. Replace the branch after `#` with a full commit SHA to pin a specific build, and commit your application's lockfile. These instructions use GitHub distribution; the package name alone is not an npm registry installation instruction.
+An explicit HTTPS dependency URL is `git+https://github.com/rickgorman/x-reply-opportunity-grid.git`; for SSH, use `git+ssh://git@github.com/rickgorman/x-reply-opportunity-grid.git`. Pin a commit SHA after `#` when you want a fixed build, and commit your application's lockfile. These instructions use GitHub distribution; the package name alone is not an npm registry installation instruction.
 
 ### Peer dependencies
 
@@ -65,7 +66,7 @@ Source maps are included for both JavaScript formats. Use the public entries abo
 |---|---|---|
 | `ReplyOpportunityGrid` | React component | Column grid of opportunity cards |
 | `scoreReplyOpportunity(tweet, opts?)` | Pure function | Score + label + explanation |
-| stylesheet import `.../styles.css` | CSS | Scoped under `.x-reply-opportunity-grid` |
+| stylesheet import `.../styles.css` | CSS | CSS scoped under `.x-reply-opportunity-grid` |
 | Types + layout helpers | — | `Tweet`, `columnCountForWidth`, `DEFAULT_MIN_CARD_WIDTH`, … |
 
 ## ReplyOpportunityGrid options
@@ -153,7 +154,7 @@ This package never posts, replies, likes, reposts, follows, or DMs. It only rend
 Clone the repository to run the demo; it is not shipped in the consumer package. Use the Node.js version and GitHub access described above:
 
 ```sh
-git clone --branch feat/react-package https://github.com/rickgorman/x-reply-opportunity-grid.git
+git clone https://github.com/rickgorman/x-reply-opportunity-grid.git
 cd x-reply-opportunity-grid
 ```
 
@@ -193,12 +194,18 @@ To try the packaged files in another local app, run `npm pack` here, then run `n
 ```text
 src/           library (index, types, scoring, layout, grid, hooks, styles, lexicon, tests)
 demo/          Vite app (index.html, main.tsx, styles.css, vite.config.ts)
-fixtures/      tweets.json, interest-lexicon.json, index.ts
+fixtures/      fictional tweets.json, interest-lexicon.json, index.ts
 docs/          dashboard-preview.png (README hero)
 legacy/vanilla-snapshot/  original vanilla app.js / styles.css / data
+LICENSE        MIT
 package.json   name @rickgorman/x-reply-opportunity-grid
 tsup.config.ts / vitest.config.ts / tsconfig.json
-BRIEF-react-package.md
 ```
 
 Vanilla history lives under `legacy/vanilla-snapshot/`. Prefer `src/` for product changes.
+
+## License
+
+MIT © Rick Gorman. See [LICENSE](LICENSE).
+
+This project is **not affiliated with, endorsed by, or sponsored by X Corp or Twitter**. “X” / “Twitter” appear only as descriptive references to the public website where posts open. Brand colors or dark-theme styling that resemble a social feed are original CSS under this MIT license, not copied proprietary assets.

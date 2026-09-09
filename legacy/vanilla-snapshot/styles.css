@@ -1,7 +1,7 @@
 :root {
   color-scheme: dark;
   font-size: 120%;
-  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: #000;
   color: #e7e9ea;
   font-synthesis: none;
