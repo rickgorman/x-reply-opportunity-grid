@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A read-only, X-dark React grid with transparent reply-opportunity scoring.",
   "type": "module",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rickgorman/x-reply-opportunity-grid.git"
@@ -26,6 +26,7 @@
   },
   "files": [
     "dist",
+    "LICENSE",
     "README.md",
     "docs/dashboard-preview.png"
   ],

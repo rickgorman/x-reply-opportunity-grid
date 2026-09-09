@@ -11,7 +11,7 @@ function App() {
   const [previewLines, setPreviewLines] = useState(12);
   return <>
     <header className="topbar">
-      <a className="brand" href="./"><span className="brand-mark" aria-hidden="true">𝕏</span> Reply dashboard <span className="version">REACT</span></a>
+      <a className="brand" href="./"><span className="brand-mark" aria-hidden="true">▦</span> Reply dashboard <span className="version">REACT</span></a>
       <span className="session-info"><span className="status-dot" /> Local fixture demo</span>
     </header>
     <main>
