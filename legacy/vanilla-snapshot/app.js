@@ -16,10 +16,10 @@ let tweets = [];
 let interestLexicon = {};
 let visited = readVisited();
 
-const MIN_CARD_WIDTH = 560;
+const MIN_CARD_WIDTH = 400;
 const GRID_GAP = 12;
 const MAIN_INLINE_PAD = 56; // main padding 28px * 2
-const MAX_COLUMNS = 7;
+const MAX_COLUMNS = 8;
 let renderedBatches = [];
 let columnCount = 0;
 let resizeTimer = 0;
@@ -330,8 +330,8 @@ function createCard(tweet, index, now) {
   }
   const joined = document.createElement('span');
   joined.textContent = `Joined ${joinedFormatter.format(new Date(tweet.joinedAt))}`;
+  joined.title = joined.textContent;
   glance.append(joined);
-  details.append(glance);
 
   const score = document.createElement('span');
   score.className = 'opportunity-score';
@@ -345,7 +345,7 @@ function createCard(tweet, index, now) {
   body.id = `body-${tweet.id}`;
   body.textContent = tweet.body;
   author.append(score);
-  link.append(author, body);
+  link.append(author, glance, body);
   card.append(link);
 
   const more = document.createElement('button');

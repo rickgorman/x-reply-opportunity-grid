@@ -97,14 +97,14 @@ export interface ReplyOpportunityGridProps {
   readonly scoreOptions?: ScoreOptions;
   /**
    * Preferred minimum card width in CSS pixels. Column count shrinks before cards
-   * go under this floor. Default 560. Ignored when `breakpoints` is provided.
+   * go under this floor. Default 400. Ignored when `breakpoints` is provided.
    */
   readonly minCardWidth?: number;
   /** Gap between columns/cards in CSS pixels. Default 12. Used with minCardWidth fitting. */
   readonly gridGap?: number;
   /** Horizontal chrome padding assumed outside the grid when fitting columns. Default 56. */
   readonly mainInlinePad?: number;
-  /** Cap on columns when using min-card-width fitting. Default 7. */
+  /** Cap on columns when using min-card-width fitting. Default 8. */
   readonly maxColumns?: number;
   /**
    * Legacy breakpoint table. When set, replaces min-card-width fitting.

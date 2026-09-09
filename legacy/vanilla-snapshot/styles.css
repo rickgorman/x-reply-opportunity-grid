@@ -32,7 +32,7 @@ button { font: inherit; }
 .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); }
 .divider { color: var(--muted); margin: 0 5px; }
 main { padding: 0 28px 24px; }
-.page-heading { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 25px 0; }
+.page-heading { display: flex; justify-content: flex-end; align-items: center; gap: 24px; padding: 18px 0 8px; }
 h1 { margin: 0; font-size: 1.75rem; line-height: 1.2; font-weight: 800; letter-spacing: -.8px; }
 .intro { margin: 7px 0 0; color: var(--muted); font-size: 0.875rem; }
 .progress { display: flex; align-items: baseline; gap: 8px; color: var(--muted); font-size: 0.75rem; white-space: nowrap; }
@@ -51,7 +51,7 @@ h1 { margin: 0; font-size: 1.75rem; line-height: 1.2; font-weight: 800; letter-s
 .notice { color: #e7e9ea; background: #080808; padding: 15px; border: 1px solid var(--line); border-radius: 12px; font-size: 0.8125rem; }
 
 .tweet-grid { display: flex; align-items: flex-start; gap: 12px; }
-.tweet-col { flex: 1 1 560px; min-width: min(100%, 560px); display: flex; flex-direction: column; gap: 12px; }
+.tweet-col { flex: 1 1 400px; min-width: min(100%, 400px); display: flex; flex-direction: column; gap: 12px; }
 .tweet-card {
   --avatar-size: 36px;
   --content-inset: 56px;
@@ -116,9 +116,9 @@ h1 { margin: 0; font-size: 1.75rem; line-height: 1.2; font-weight: 800; letter-s
 .expand-button { position: relative; z-index: 1; display: block; margin: 3px 12px 0 var(--content-inset); border: 0; border-radius: 3px; padding: 0; min-height: 24px; background: none; color: var(--accent); font-size: 0.875rem; cursor: pointer; }
 .expand-button:hover { text-decoration: underline; }
 .expand-button:focus-visible, .brand:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-.account-glance { position: relative; z-index: 1; display: flex; flex-wrap: nowrap; align-items: baseline; gap: 2px 4px; margin-top: 4px; max-width: 100%; overflow: hidden; color: var(--muted); font-size: 0.6875rem; line-height: 1.55; }
-.account-glance > span { white-space: nowrap; }
-.account-glance > span:last-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.account-glance { position: relative; z-index: 1; display: flex; flex-wrap: nowrap; align-items: baseline; gap: 4px; margin: 4px 0 0 44px; max-width: 100%; overflow: hidden; color: var(--muted); font-size: 0.6875rem; line-height: 1.55; }
+.account-glance > span { flex-shrink: 0; white-space: nowrap; }
+.account-glance > span:last-child { flex-shrink: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .account-glance strong { color: #a6aaae; font-weight: 600; }
 .opportunity-score { position: relative; z-index: 1; flex: 0 1 auto; align-self: flex-start; margin: 0 0 0 8px; max-width: 42%; padding: 1px 7px; border: 1px solid var(--opportunity-edge); border-radius: 999px; background: var(--opportunity-tint); color: var(--opportunity-ink); font-size: 0.6875rem; font-weight: 600; line-height: 1.6; font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tweet-metrics { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 10px; margin: 13px 12px 0 var(--content-inset); color: var(--muted); }

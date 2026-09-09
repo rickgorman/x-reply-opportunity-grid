@@ -16,11 +16,8 @@ function App() {
       <span className="session-info"><span className="status-dot" /> Local fixture demo</span>
     </header>
     <main>
-      <section className="page-heading" aria-labelledby="page-title">
-        <div><p className="eyebrow">A LITTLE CONTEXT. A BETTER CONVERSATION.</p><h1 id="page-title">Worth a reply.</h1><p className="intro">Find a conversation. Add something good.</p></div>
-        <div className="progress" aria-live="polite"><strong>{demoTweets.length - visited.length}</strong><span>left to explore</span></div>
-      </section>
       <div className="demo-controls">
+        <div className="progress" aria-live="polite"><strong>{demoTweets.length - visited.length}</strong><span>left to explore</span></div>
         <div className="tier-legend" aria-label="Opportunity tiers"><span className="tier best">Best ≥70</span><span className="tier good">Good ≥50</span><span className="tier average">Average &lt;50</span></div>
         <div className="settings">
           <label>Preview <select value={previewLines} onChange={event => setPreviewLines(Number(event.target.value))}><option value={6}>6 lines</option><option value={12}>12 lines</option><option value={18}>18 lines</option></select></label>

@@ -20,10 +20,14 @@ const tweet = (id: string): Tweet => ({
 });
 
 describe('columnCountForWidth', () => {
-  it('defaults min card width to 560 and drops columns before crushing', () => {
-    expect(DEFAULT_MIN_CARD_WIDTH).toBe(560);
-    // available = width - 56; cols = floor((available + 12) / (560 + 12))
-    expect(columnCountForWidth(2200)).toBe(3); // fits fewer cols at 560px with pad/gap
+  it('fits eight ultrawide columns and drops columns before crushing', () => {
+    expect(DEFAULT_MIN_CARD_WIDTH).toBe(400);
+    expect(columnCountForWidth(2200)).toBe(5);
+    expect(columnCountForWidth(2560)).toBe(6);
+    expect(columnCountForWidth(3440)).toBe(8);
+    expect(columnCountForWidth(3339)).toBe(7);
+    expect(columnCountForWidth(3340)).toBe(8);
+    expect(columnCountForWidth(5000)).toBe(8);
     expect(columnCountForWidth(356)).toBe(1);
     expect(columnCountForWidth(1200)).toBe(2);
     expect(columnCountForWidth(100)).toBe(1);

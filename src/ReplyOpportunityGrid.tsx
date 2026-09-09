@@ -47,6 +47,7 @@ function TweetCard({ tweet, index, score, now, previewLines, visitedAt, onVisit 
   const [expanded, setExpanded] = useState(false);
   const preview = useTextPreview(tweet.body, previewLines);
   const joinedAt = Date.parse(tweet.joinedAt);
+  const joined = `Joined ${Number.isFinite(joinedAt) ? joinedFormatter.format(joinedAt) : 'unknown'}`;
   const href = `https://x.com/${encodeURIComponent(tweet.handle)}/status/${encodeURIComponent(tweet.id)}`;
   const visit = (event: MouseEvent<HTMLAnchorElement>) => {
     if (event.button === 0 || event.button === 1) onVisit(tweet.id);
@@ -67,15 +68,15 @@ function TweetCard({ tweet, index, score, now, previewLines, visitedAt, onVisit 
             <span aria-hidden="true">·</span>
             <time className="tweet-time" dateTime={tweet.createdAt} title={new Date(tweet.createdAt).toUTCString()}>{relativeTime(tweet.createdAt, now)}</time>
           </span>
-          <div className="account-glance">
-            <span title={`${tweet.following.toLocaleString('en-US')} following`}><strong>{countFormatter.format(tweet.following)}</strong> following</span>
-            <span aria-hidden="true">·</span>
-            <span title={`${tweet.followers.toLocaleString('en-US')} followers`}><strong>{countFormatter.format(tweet.followers)}</strong> followers</span>
-            <span aria-hidden="true">·</span>
-            <span>Joined {Number.isFinite(joinedAt) ? joinedFormatter.format(joinedAt) : 'unknown'}</span>
-          </div>
         </div>
         <span className="opportunity-score" role="img" title={score.explanation} aria-label={score.explanation}>{score.label} · {score.score}</span>
+      </div>
+      <div className="account-glance">
+        <span title={`${tweet.following.toLocaleString('en-US')} following`}><strong>{countFormatter.format(tweet.following)}</strong> following</span>
+        <span aria-hidden="true">·</span>
+        <span title={`${tweet.followers.toLocaleString('en-US')} followers`}><strong>{countFormatter.format(tweet.followers)}</strong> followers</span>
+        <span aria-hidden="true">·</span>
+        <span title={joined}>{joined}</span>
       </div>
       <div className="tweet-body-wrap">
         <p id={bodyId} className="tweet-body">{expanded ? tweet.body : preview.text}</p>

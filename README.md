@@ -2,7 +2,7 @@
 
 ![Reply opportunity grid preview](docs/dashboard-preview.png)
 
-A **read-only**, X-dark React component library for scanning posts worth replying to. Transparent opportunity scoring, round-robin column stacks that **preserve card width** (minCardWidth default 560), local visited state, and zero write actions against X.
+A **read-only**, X-dark React component library for scanning posts worth replying to. Transparent opportunity scoring, round-robin column stacks that **preserve card width** (`minCardWidth` default **400**, `maxColumns` **8**), local visited state, and zero write actions against X.
 
 **Package:** `@rickgorman/x-reply-opportunity-grid`
 **Peers:** `react` + `react-dom` (18 or 19)
@@ -10,33 +10,56 @@ A **read-only**, X-dark React component library for scanning posts worth replyin
 
 ---
 
-## Quick Start
+## Install (private GitHub)
+
+Use Node.js **22.12+** (Node 20.19+ is also supported), Git, and access to this private repository. Authenticate Git with GitHub using your credential manager or SSH key before installing; npm registry authentication alone does not grant repository access.
+
+Install from the React package branch in your application. Choose one package manager:
+
+| Package manager | Install |
+|---|---|
+| npm | `npm install "github:rickgorman/x-reply-opportunity-grid#feat/react-package"` |
+| pnpm | `pnpm add "github:rickgorman/x-reply-opportunity-grid#feat/react-package"` |
+| Yarn | `yarn add "github:rickgorman/x-reply-opportunity-grid#feat/react-package"` |
+| Bun | `bun add "github:rickgorman/x-reply-opportunity-grid#feat/react-package"` |
+
+An explicit HTTPS dependency URL is `git+https://github.com/rickgorman/x-reply-opportunity-grid.git#feat/react-package`; for SSH, use `git+ssh://git@github.com/rickgorman/x-reply-opportunity-grid.git#feat/react-package`. Replace the branch after `#` with a full commit SHA to pin a specific build, and commit your application's lockfile. These instructions use GitHub distribution; the package name alone is not an npm registry installation instruction.
+
+### Peer dependencies
+
+React and React DOM are provided by your application and are not bundled:
+
+| Package | Supported range |
+|---|---|
+| `react` | `^18.2.0 || ^19.0.0` |
+| `react-dom` | `^18.2.0 || ^19.0.0` |
+
+If your app does not already have them, install a matching pair using `npm install react@^19 react-dom@^19`, `pnpm add react@^19 react-dom@^19`, `yarn add react@^19 react-dom@^19`, or `bun add react@^19 react-dom@^19`. TypeScript apps also need matching `@types/react` and `@types/react-dom` as development dependencies. Existing React 18.2+ apps can keep React 18.
+
+## Usage
 
 ```tsx
-import { ReplyOpportunityGrid, scoreReplyOpportunity } from "@rickgorman/x-reply-opportunity-grid";
+import { ReplyOpportunityGrid, type Tweet } from "@rickgorman/x-reply-opportunity-grid";
 import "@rickgorman/x-reply-opportunity-grid/styles.css";
 
-export function Feed({ tweets }) {
+export function Feed({ tweets }: { tweets: readonly Tweet[] }) {
   return <ReplyOpportunityGrid tweets={tweets} />;
 }
 ```
 
-## Private GitHub install
+Import the CSS once in your application's entry point or global stylesheet entry. The JavaScript entry does not load it automatically. Supply your own `Tweet[]`: keep IDs as strings, handles without `@`, `source` as `"feed"` or `"candidate"`, and timestamps in ISO format. The package does not fetch posts or require X credentials.
 
-This repository is private. After you have access:
+### Package contents and module formats
 
-```sh
-npm install github:rickgorman/x-reply-opportunity-grid#main
-npm install github:rickgorman/x-reply-opportunity-grid#feat/react-package
-npm install git+https://github.com/rickgorman/x-reply-opportunity-grid.git
-```
+Git installs use the **committed `dist/` output**. There is no `prepare` script and consumers do not need to build this repository or install its development tools. The package includes `dist/`, this README, the preview image, and `package.json`; the Vite demo, fixtures, tests, and legacy app are not included.
 
-## Peer dependencies
-
-| Package | Range |
+| Public entry | Resolved output |
 |---|---|
-| `react` | `^18.2.0 || ^19.0.0` |
-| `react-dom` | `^18.2.0 || ^19.0.0` |
+| `import … from "@rickgorman/x-reply-opportunity-grid"` | ESM: `dist/index.js`, types: `dist/index.d.ts` |
+| `require("@rickgorman/x-reply-opportunity-grid")` | CommonJS: `dist/index.cjs`, types: `dist/index.d.cts` |
+| `@rickgorman/x-reply-opportunity-grid/styles.css` | `dist/styles.css` |
+
+Source maps are included for both JavaScript formats. Use the public entries above; internal `src/` and `dist/` subpaths are not exported. CSS is marked as a side effect so bundlers retain its explicit import. Both JavaScript bundles carry `"use client"` for React frameworks with server components; load the stylesheet where your framework permits global CSS.
 
 ## Public API
 
@@ -53,10 +76,10 @@ npm install git+https://github.com/rickgorman/x-reply-opportunity-grid.git
 |---|---|---|---|
 | `tweets` | `readonly Tweet[]` | required | Cards to render. Input order preserved (no score sort). First duplicate id wins. |
 | `scoreOptions` | `ScoreOptions` | `{}` | Forwarded to the scorer. |
-| `minCardWidth` | `number` | `560` | Preferred card floor in CSS px. **Column count drops before cards crush under this width.** Ignored when `breakpoints` is set. |
+| `minCardWidth` | `number` | `400` | Preferred card floor in CSS px. **Column count drops before cards crush under this width.** Ignored when `breakpoints` is set. |
 | `gridGap` | `number` | `12` | Gap used by min-width fitting. |
 | `mainInlinePad` | `number` | `56` | Assumed horizontal chrome outside the grid when fitting. |
-| `maxColumns` | `number` | `7` | Cap when using min-card-width fitting. |
+| `maxColumns` | `number` | `8` | Cap when using min-card-width fitting. |
 | `breakpoints` | `readonly ColumnBreakpoint[]` | unset | Legacy `{ minWidth, columns }` table; replaces min-card-width fitting when set. |
 | `storageKey` | `string | null` | `x-reply-visited` | localStorage key; `null` disables persistence. |
 | `previewLines` | `number` | `12` | Collapsed body line budget before Show more. |
@@ -69,14 +92,14 @@ npm install git+https://github.com/rickgorman/x-reply-opportunity-grid.git
 
 ## Layout and minCardWidth
 
-Default behavior fits as many columns as possible without cards going under `minCardWidth` (560px):
+Default behavior fits as many columns as possible without cards going under `minCardWidth` (400px):
 
 ```text
 available = viewportWidth - mainInlinePad
 columns   = clamp(1..maxColumns, floor((available + gridGap) / (minCardWidth + gridGap)))
 ```
 
-Cards keep ~560px minimum; the grid drops columns as the viewport shrinks. Round-robin placement keeps source order (index i goes to column i % columns).
+Cards keep a 400px floor (or the available width on smaller screens); the grid drops columns as the viewport shrinks. Default column counts are 2200→5 · 2560→6 · 3440→8. Account details use the full body width below the author row, with Joined staying on the same line and ellipsizing only when needed. Round-robin placement keeps source order (index i goes to column i % columns).
 
 Legacy breakpoints (only when you pass `breakpoints`): 2200→7 · 1800→6 · 1500→5 · 1200→4 · 900→3 · 600→2 · 0→1.
 
@@ -127,11 +150,45 @@ Named region, score chip with full explanation as aria-label, metric text altern
 
 This package never posts, replies, likes, reposts, follows, or DMs. It only renders tweets you pass in, scores them locally, and opens `https://x.com/{handle}/status/{id}` with `rel=noopener noreferrer`.
 
-## Demo
+## Vite demo (repository checkout)
 
-From the repo root, install dependencies then use package scripts: `dev` (Vite on http://127.0.0.1:5173), `test` (vitest), `build` (library to dist/ with d.ts + CSS), `build:demo` (demo-dist/), `typecheck`.
+Clone the repository to run the demo; it is not shipped in the consumer package. Use the Node.js version and GitHub access described above:
 
-The demo uses `fixtures/tweets.json` with a fixed clock (`2026-09-08T18:00:00Z`) so fictional tiers stay stable.
+```sh
+git clone --branch feat/react-package https://github.com/rickgorman/x-reply-opportunity-grid.git
+cd x-reply-opportunity-grid
+```
+
+From the repository root, choose one row and run its install command followed by its dev command:
+
+| Package manager | Install dependencies | Start Vite |
+|---|---|---|
+| npm | `npm ci` | `npm run dev` |
+| pnpm | `pnpm install` | `pnpm dev` |
+| Yarn | `yarn install` | `yarn dev` |
+| Bun | `bun install` | `bun run dev` |
+
+Open **http://127.0.0.1:5173**. Vite uses a strict port: if 5173 is occupied, stop the conflicting server or pass `--port 5174` to your dev command. Stop Vite with Ctrl+C. The repository tracks `package-lock.json`; npm uses that lockfile, while other managers resolve dependencies and create their own lockfiles.
+
+The demo imports the library source directly, so no library build is required before starting it. It uses `fixtures/tweets.json` with a fixed clock (`2026-09-08T18:00:00Z`) so fictional tiers stay stable. The page opens with the compact controls and grid, without a marketing heading.
+
+## Building and checking the package
+
+Run these from the repository root after installing dependencies:
+
+```sh
+npm run typecheck
+npm test
+npm run build
+npm run build:demo
+npm pack --dry-run
+```
+
+For pnpm, Yarn, or Bun, use `pnpm run <script>`, `yarn run <script>`, or `bun run <script>` for the same package scripts. `test:watch` runs Vitest interactively.
+
+`build` recreates `dist/` with ESM, CommonJS, declarations, source maps, and CSS. **Commit the rebuilt `dist/` alongside every library source change** so GitHub consumers receive matching output. `build:demo` produces the standalone demo in `demo-dist/`, which stays ignored. `npm pack --dry-run` lists the consumer package contents; it does not rebuild them. `prepublishOnly` runs typecheck, tests, and the library build when publishing, but does not run for a normal Git install or `npm pack`.
+
+To try the packaged files in another local app, run `npm pack` here, then run `npm install /absolute/path/to/rickgorman-x-reply-opportunity-grid-0.1.0.tgz` in that app (or use your manager's `add` command). Install the React peers there as described above. The tarball contains the current `dist/`, so build first.
 
 ## For agents — file map
 

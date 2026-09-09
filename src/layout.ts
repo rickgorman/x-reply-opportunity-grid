@@ -1,10 +1,10 @@
 import type { ColumnBreakpoint, Tweet } from './types';
 
 /** Preferred card floor; column count shrinks before cards go under this. */
-export const DEFAULT_MIN_CARD_WIDTH = 560;
+export const DEFAULT_MIN_CARD_WIDTH = 400;
 export const DEFAULT_GRID_GAP = 12;
 export const DEFAULT_MAIN_INLINE_PAD = 56;
-export const DEFAULT_MAX_COLUMNS = 7;
+export const DEFAULT_MAX_COLUMNS = 8;
 
 /** @deprecated Prefer min-card-width layout via columnCountForWidth(width, opts). Kept for option compatibility. */
 export const DEFAULT_COLUMN_BREAKPOINTS: readonly ColumnBreakpoint[] = Object.freeze([
