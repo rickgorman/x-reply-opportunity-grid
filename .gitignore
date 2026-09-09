@@ -1,0 +1,13 @@
+.DS_Store
+*.log
+*.pid
+codex-*.txt
+codex-*.log
+codex.pid
+server.log
+server.pid
+session-diag.txt
+node_modules/
+dist/
+.turbo/
+*.tgz
