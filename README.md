@@ -1,5 +1,3 @@
-# @rickgorman/x-reply-opportunity-grid
-
 ![Reply opportunity grid preview](docs/dashboard-preview.png)
 
 A **read-only**, X-dark React component library for scanning posts worth replying to. Transparent opportunity scoring, round-robin column stacks that **preserve card width** (`minCardWidth` default **400**, `maxColumns` **8**), local visited state, and zero write actions against X.
