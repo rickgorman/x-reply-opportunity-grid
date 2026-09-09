@@ -16,24 +16,26 @@ let tweets = [];
 let interestLexicon = {};
 let visited = readVisited();
 
-const COLUMN_BREAKPOINTS = [
-  { minWidth: 2200, columns: 7 },
-  { minWidth: 1800, columns: 6 },
-  { minWidth: 1500, columns: 5 },
-  { minWidth: 1200, columns: 4 },
-  { minWidth: 900, columns: 3 },
-  { minWidth: 600, columns: 2 },
-  { minWidth: 0, columns: 1 }
-];
+const MIN_CARD_WIDTH = 420;
+const GRID_GAP = 12;
+const MAIN_INLINE_PAD = 56; // main padding 28px * 2
+const MAX_COLUMNS = 7;
 let renderedBatches = [];
 let columnCount = 0;
 let resizeTimer = 0;
 
 function columnCountForWidth(width) {
-  for (const breakpoint of COLUMN_BREAKPOINTS) {
-    if (width >= breakpoint.minWidth) return breakpoint.columns;
-  }
-  return 1;
+  const available = Math.max(0, width - MAIN_INLINE_PAD);
+  // Fit as many columns as possible without going under MIN_CARD_WIDTH.
+  const cols = Math.floor((available + GRID_GAP) / (MIN_CARD_WIDTH + GRID_GAP));
+  return Math.max(1, Math.min(MAX_COLUMNS, cols || 1));
+}
+
+function layoutWidth() {
+  // Prefer the grid's content box so zoom/scrollbar match what cards actually get.
+  const gridWidth = grid?.clientWidth;
+  if (Number.isFinite(gridWidth) && gridWidth > 0) return gridWidth + MAIN_INLINE_PAD;
+  return window.innerWidth;
 }
 
 /** Round-robin into columns in given order (no score sort).
@@ -54,7 +56,7 @@ function ensureColumns(count) {
 }
 
 function paintBatches(batches, now = Date.now()) {
-  const columns = ensureColumns(columnCountForWidth(window.innerWidth));
+  const columns = ensureColumns(columnCountForWidth(layoutWidth()));
   for (const col of columns) col.replaceChildren();
   batches.forEach((batch, batchIndex) => {
     batch.forEach((tweet, index) => {
@@ -74,7 +76,7 @@ function appendBatch(batch, now = Date.now()) {
   renderedBatches.push(batch.slice());
   // Append-only path for future infinite scroll: stripe this batch onto
   // existing columns without reshuffling earlier batches.
-  const columns = ensureColumns(columnCount || columnCountForWidth(window.innerWidth));
+  const columns = ensureColumns(columnCount || columnCountForWidth(layoutWidth()));
   const batchIndex = renderedBatches.length - 1;
   batch.forEach((tweet, index) => {
     columns[index % columns.length].append(createCard(tweet, batchIndex * 1000 + index, now));
@@ -84,9 +86,18 @@ function appendBatch(batch, now = Date.now()) {
 function scheduleMasonryRelayout() {
   window.clearTimeout(resizeTimer);
   resizeTimer = window.setTimeout(() => {
-    const next = columnCountForWidth(window.innerWidth);
-    if (next === columnCount || !renderedBatches.length) return;
-    paintBatches(renderedBatches);
+    if (!renderedBatches.length) return;
+    const next = columnCountForWidth(layoutWidth());
+    if (next !== columnCount) {
+      paintBatches(renderedBatches);
+      return;
+    }
+    // Same column count (common on zoom): force preview remeasure via a tiny
+    // style nudge so ResizeObservers see line-box changes.
+    grid.querySelectorAll('.tweet-body').forEach(body => {
+      body.style.maxWidth = '99.999%';
+      requestAnimationFrame(() => { body.style.maxWidth = ''; });
+    });
   }, 120);
 }
 
@@ -206,9 +217,13 @@ function setupPreview(body, more, fullText) {
     more.textContent = expanded ? 'Show less' : collapsedLabel;
     more.hidden = false;
   };
+  let lastLineHeight = 0;
   const observer = new ResizeObserver(([entry]) => {
-    if (entry.contentRect.width === lastWidth) return;
-    lastWidth = entry.contentRect.width;
+    const width = entry.contentRect.width;
+    const lineHeight = parseFloat(getComputedStyle(body).lineHeight) || 0;
+    if (width === lastWidth && lineHeight === lastLineHeight) return;
+    lastWidth = width;
+    lastLineHeight = lineHeight;
     requestAnimationFrame(updatePreview);
   });
   observer.observe(body);
@@ -420,4 +435,8 @@ window.addEventListener('storage', event => {
 });
 
 window.addEventListener('resize', scheduleMasonryRelayout);
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', scheduleMasonryRelayout);
+}
+
 loadTweets();

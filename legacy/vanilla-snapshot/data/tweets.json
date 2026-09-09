@@ -1,0 +1,686 @@
+[
+  {
+    "id": "2100000000000000001",
+    "name": "Mara Chen",
+    "handle": "mara_builds",
+    "bio": "Product builder and founder. Building useful software, one small release at a time.",
+    "source": "feed",
+    "createdAt": "2026-09-08T15:42:00Z",
+    "body": "The best feature we shipped this month was deleting a step.\n\nOnboarding went from 6 screens to 3. Activation moved more than it did after six weeks of adding things.\n\nWhat did you remove that made your product better?",
+    "following": 482,
+    "followers": 12800,
+    "joinedAt": "2011-01-01",
+    "verified": true,
+    "metrics": {
+      "replies": 166,
+      "reposts": 322,
+      "likes": 3200,
+      "views": 322000
+    }
+  },
+  {
+    "id": "2100000000000000002",
+    "name": "Leo Park",
+    "handle": "leopark_dev",
+    "bio": "Indie developer and founder. Building small automation tools.",
+    "source": "feed",
+    "createdAt": "2026-09-08T16:59:00Z",
+    "body": "Small tools that do one thing perfectly are having a moment.\n\nMy most-used app this week is a 200-line script with a button on top.",
+    "following": 250,
+    "followers": 590,
+    "joinedAt": "2012-06-01",
+    "verified": false,
+    "metrics": {
+      "replies": 4,
+      "reposts": 1,
+      "likes": 88,
+      "views": 1620
+    }
+  },
+  {
+    "id": "2100000000000000003",
+    "name": "Nina Brooks",
+    "handle": "ninamakesnotes",
+    "bio": "Indie developer and founder. Building small automation tools.",
+    "source": "candidate",
+    "createdAt": "2026-09-08T20:35:00Z",
+    "body": "Looking for examples of AI tools that actually give you time back. Not a demo, not a benchmark. Something you used this morning and would miss tomorrow.\n\nBonus points if the boring details are the reason it works: sensible defaults, a fast undo, and an output you can check in under a minute.",
+    "following": 250,
+    "followers": 380,
+    "joinedAt": "2013-11-01",
+    "verified": true,
+    "metrics": {
+      "replies": 4,
+      "reposts": 1,
+      "likes": 40,
+      "views": 900
+    }
+  },
+  {
+    "id": "2100000000000000004",
+    "name": "Theo Ramirez",
+    "handle": "theo_on_product",
+    "bio": "Product strategy, customer interviews, and asking better questions.",
+    "source": "feed",
+    "createdAt": "2026-09-08T15:02:00Z",
+    "body": "A useful product question: what does the user have open in the tab next to yours?\n\nThat might tell you more about your roadmap than the feature request queue.",
+    "following": 638,
+    "followers": 8700,
+    "joinedAt": "2014-04-01",
+    "verified": true,
+    "metrics": {
+      "replies": 19,
+      "reposts": 27,
+      "likes": 412,
+      "views": 18300
+    }
+  },
+  {
+    "id": "2100000000000000005",
+    "name": "Sana Patel",
+    "handle": "sana_ships",
+    "bio": "Dashboard designer and builder. Making dense information easier to scan.",
+    "source": "feed",
+    "createdAt": "2026-09-08T14:51:00Z",
+    "body": "Spent the morning watching someone use our dashboard on a giant monitor. We had designed every screen like it was a phone wearing a desktop costume.\n\nInformation density is a feature when the job is scanning. Give people room to see relationships, not just bigger margins.",
+    "following": 391,
+    "followers": 24600,
+    "joinedAt": "2015-09-01",
+    "verified": false,
+    "metrics": {
+      "replies": 63,
+      "reposts": 91,
+      "likes": 974,
+      "views": 46200
+    }
+  },
+  {
+    "id": "2100000000000000006",
+    "name": "Owen Ellis",
+    "handle": "owen_experiments",
+    "bio": "Clinical informatics engineer. Builder working on wearable sensors and agent tooling.",
+    "source": "candidate",
+    "createdAt": "2026-09-08T23:11:00Z",
+    "body": "What's the smallest thing you've built that you still use every day?\n\nMine: a page of links that remembers which ones I've already opened.",
+    "following": 260,
+    "followers": 420,
+    "joinedAt": "2016-02-01",
+    "verified": true,
+    "metrics": {
+      "replies": 1,
+      "reposts": 0,
+      "likes": 8,
+      "views": 180
+    }
+  },
+  {
+    "id": "2100000000000000007",
+    "name": "Ada Morgan",
+    "handle": "ada_in_the_loop",
+    "bio": "AI agents and automation engineer. Observable checks over longer prompts.",
+    "source": "feed",
+    "createdAt": "2026-09-08T14:22:00Z",
+    "body": "The agent didn't need a longer prompt. It needed a smaller task and a way to tell whether it was done.\n\nWe've spent a week replacing vague instructions with observable checks. Fewer retries, much less supervision, and the failures are finally understandable.",
+    "following": 764,
+    "followers": 18300,
+    "joinedAt": "2017-07-01",
+    "verified": false,
+    "metrics": {
+      "replies": 142,
+      "reposts": 286,
+      "likes": 4600,
+      "views": 198000
+    }
+  },
+  {
+    "id": "2100000000000000008",
+    "name": "Ben Walker",
+    "handle": "benwalksbuilds",
+    "bio": "Writing about decisions, charts, and paying attention.",
+    "source": "feed",
+    "createdAt": "2026-09-08T14:09:00Z",
+    "body": "New personal rule: before opening the analytics dashboard, write down the decision I'm trying to make.\n\nTurns out a surprising number of dashboard visits were just procrastination with charts.",
+    "following": 328,
+    "followers": 5600,
+    "joinedAt": "2018-12-01",
+    "verified": true,
+    "metrics": {
+      "replies": 32,
+      "reposts": 46,
+      "likes": 631,
+      "views": 27400
+    }
+  },
+  {
+    "id": "2100000000000000009",
+    "name": "Iris Okafor",
+    "handle": "iris_designs",
+    "bio": "Designer writing about product and research notes.",
+    "source": "candidate",
+    "createdAt": "2026-09-08T19:59:00Z",
+    "body": "Designers building for power users: how do you decide when to add density versus progressive disclosure?\n\nI'm working on a research interface where people compare dozens of items at once. Our usual 'one primary action per screen' advice feels actively unhelpful here.",
+    "following": 250,
+    "followers": 415,
+    "joinedAt": "2019-05-01",
+    "verified": true,
+    "metrics": {
+      "replies": 5,
+      "reposts": 1,
+      "likes": 48,
+      "views": 1020
+    }
+  },
+  {
+    "id": "2100000000000000010",
+    "name": "Jules Kim",
+    "handle": "jules_tinkers",
+    "bio": "Clinical informatics engineer. Builder working on wearable sensors and agent tooling.",
+    "source": "feed",
+    "createdAt": "2026-09-08T22:11:00Z",
+    "body": "Local-first doesn't have to be a manifesto. Sometimes it just means your little tool opens instantly and still works when the Wi-Fi doesn't.",
+    "following": 280,
+    "followers": 580,
+    "joinedAt": "2020-10-01",
+    "verified": false,
+    "metrics": {
+      "replies": 1,
+      "reposts": 0,
+      "likes": 12,
+      "views": 260
+    }
+  },
+  {
+    "id": "2100000000000000011",
+    "name": "Amir Shah",
+    "handle": "amir_in_public",
+    "bio": "Founder building healthcare workflow tools with small teams.",
+    "source": "feed",
+    "createdAt": "2026-09-08T13:28:00Z",
+    "body": "My favorite customer feedback this week: 'I stopped keeping a separate spreadsheet.'\n\nNot flashy, but that sentence tells me more than a satisfaction score. We finally fit the actual workflow instead of asking someone to maintain ours alongside theirs.",
+    "following": 903,
+    "followers": 34700,
+    "joinedAt": "2021-03-01",
+    "verified": true,
+    "metrics": {
+      "replies": 76,
+      "reposts": 184,
+      "likes": 2100,
+      "views": 143000
+    }
+  },
+  {
+    "id": "2100000000000000012",
+    "name": "Cleo Martin",
+    "handle": "cleomakesstuff",
+    "bio": "Indie developer and founder. Building small automation tools.",
+    "source": "candidate",
+    "createdAt": "2026-09-08T19:23:00Z",
+    "body": "What do you put in the README for a one-afternoon prototype?\n\nTrying to find the line between 'future me can run this' and accidentally writing a constitution.",
+    "following": 250,
+    "followers": 450,
+    "joinedAt": "2022-08-01",
+    "verified": false,
+    "metrics": {
+      "replies": 6,
+      "reposts": 1,
+      "likes": 56,
+      "views": 1140
+    }
+  },
+  {
+    "id": "2100000000000000013",
+    "name": "Finn Cooper",
+    "handle": "finn_smallbets",
+    "bio": "Small bets and patient practice. Sharing what I learn along the way.",
+    "source": "feed",
+    "createdAt": "2026-09-08T12:54:00Z",
+    "body": "Ship the manual version first.\n\nIf selecting ten good examples by hand doesn't help anyone, automating the selection of ten thousand probably won't fix it.",
+    "following": 241,
+    "followers": 4200,
+    "joinedAt": "2023-01-01",
+    "verified": true,
+    "metrics": {
+      "replies": 173,
+      "reposts": 335,
+      "likes": 3337,
+      "views": 325100
+    }
+  },
+  {
+    "id": "2100000000000000014",
+    "name": "Priya Das",
+    "handle": "priya_debugs",
+    "bio": "Engineer focused on useful errors, accessible interfaces, and maintainable software.",
+    "source": "feed",
+    "createdAt": "2026-09-08T12:36:00Z",
+    "body": "A tiny engineering win: every error message in our import flow now says what happened and what to do next.\n\nNo new infrastructure. No new framework. Just an afternoon of reading messages as if I'd never seen the code, then making them useful to someone who hasn't.",
+    "following": 681,
+    "followers": 91300,
+    "joinedAt": "2011-06-01",
+    "verified": true,
+    "metrics": {
+      "replies": 31,
+      "reposts": 31,
+      "likes": 421,
+      "views": 15500
+    }
+  },
+  {
+    "id": "2100000000000000015",
+    "name": "Miles Reed",
+    "handle": "miles_buildlog",
+    "bio": "Clinical informatics engineer. Builder working on wearable sensors and agent tooling.",
+    "source": "candidate",
+    "createdAt": "2026-09-08T22:56:00Z",
+    "body": "If you could automate exactly one part of your weekly research routine, which would it be?\n\nFinding sources, sorting them, taking notes, or remembering to use what you found?",
+    "following": 265,
+    "followers": 460,
+    "joinedAt": "2012-11-01",
+    "verified": false,
+    "metrics": {
+      "replies": 1,
+      "reposts": 0,
+      "likes": 9,
+      "views": 200
+    }
+  },
+  {
+    "id": "2100000000000000016",
+    "name": "Eva Torres",
+    "handle": "eva_interfaces",
+    "bio": "Interface designer. Quiet details, clear feedback, and thoughtful defaults.",
+    "source": "feed",
+    "createdAt": "2026-09-08T12:04:00Z",
+    "body": "A visited state is such an underrated interface detail.\n\nThe computer should remember what I've already looked at. That isn't a premium feature. It's basic courtesy.",
+    "following": 452,
+    "followers": 15200,
+    "joinedAt": "2013-04-01",
+    "verified": true,
+    "metrics": {
+      "replies": 26,
+      "reposts": 40,
+      "likes": 549,
+      "views": 21400
+    }
+  },
+  {
+    "id": "2100000000000000017",
+    "name": "Noah Quinn",
+    "handle": "noah_writescode",
+    "bio": "Developer keeping a notebook of decisions and experiments.",
+    "source": "feed",
+    "createdAt": "2026-09-08T11:47:00Z",
+    "body": "I tried keeping a decision log instead of a daily task log for a month. The interesting pattern wasn't what I finished. It was which decisions I kept postponing.\n\nNext experiment: make the first work block about one of those decisions, before the easy tasks fill the day.",
+    "following": 817,
+    "followers": 6890,
+    "joinedAt": "2014-09-01",
+    "verified": false,
+    "metrics": {
+      "replies": 70,
+      "reposts": 104,
+      "likes": 1111,
+      "views": 49300
+    }
+  },
+  {
+    "id": "2100000000000000018",
+    "name": "Lena Fischer",
+    "handle": "lena_prototypes",
+    "bio": "Clinical informatics engineer. Builder working on wearable sensors and agent tooling.",
+    "source": "candidate",
+    "createdAt": "2026-09-08T22:41:00Z",
+    "body": "Anyone else returning to plain HTML, CSS, and a small JS file for prototypes?\n\nCurious where you hit the point that a framework actually earns its keep. Specific examples welcome.",
+    "following": 270,
+    "followers": 500,
+    "joinedAt": "2015-02-01",
+    "verified": true,
+    "metrics": {
+      "replies": 1,
+      "reposts": 0,
+      "likes": 10,
+      "views": 220
+    }
+  },
+  {
+    "id": "2100000000000000019",
+    "name": "Ravi Mehta",
+    "handle": "ravi_makes_tools",
+    "bio": "Clinical informatics engineer. Builder working on wearable sensors and agent tooling.",
+    "source": "feed",
+    "createdAt": "2026-09-08T21:56:00Z",
+    "body": "A tool can be valuable to exactly one person.\n\nYou don't need a total addressable market for a script that gives you back twenty minutes every morning.",
+    "following": 285,
+    "followers": 620,
+    "joinedAt": "2016-07-01",
+    "verified": true,
+    "metrics": {
+      "replies": 1,
+      "reposts": 0,
+      "likes": 13,
+      "views": 280
+    }
+  },
+  {
+    "id": "2100000000000000020",
+    "name": "Hazel Grant",
+    "handle": "hazel_on_systems",
+    "bio": "Systems researcher studying recommendations, context, and attention.",
+    "source": "feed",
+    "createdAt": "2026-09-08T10:55:00Z",
+    "body": "The hard part of a recommendation feed isn't ranking the items. It's knowing what 'good' means for the person using it today.\n\nAm I learning? Looking for someone to help? Catching up with friends? Same sources, very different answers. Context belongs in the design brief.",
+    "following": 1100,
+    "followers": 56400,
+    "joinedAt": "2017-12-01",
+    "verified": false,
+    "metrics": {
+      "replies": 39,
+      "reposts": 59,
+      "likes": 768,
+      "views": 30500
+    }
+  },
+  {
+    "id": "2100000000000000021",
+    "name": "Eli Sutton",
+    "handle": "eli_asks_why",
+    "bio": "Good questions, thoughtful conversations, and changing my mind.",
+    "source": "candidate",
+    "createdAt": "2026-09-08T10:37:00Z",
+    "body": "What's a thoughtful reply that actually made you change your mind?\n\nTrying to do more of that and less collecting bookmarks I'll never reopen.",
+    "following": 274,
+    "followers": 3900,
+    "joinedAt": "2018-05-01",
+    "verified": true,
+    "metrics": {
+      "replies": 225,
+      "reposts": 1213,
+      "likes": 12937,
+      "views": 1203100
+    }
+  },
+  {
+    "id": "2100000000000000022",
+    "name": "Zoe Bennett",
+    "handle": "zoe_fieldnotes",
+    "bio": "Clinical research fieldnotes. Working with a CRIO team on informatics.",
+    "source": "feed",
+    "createdAt": "2026-09-08T10:18:00Z",
+    "body": "Five user interviews, same workaround, five different descriptions.\n\nThe request was 'better export.' The actual need was 'let my teammate see the same thing I'm seeing without creating another account.' Glad we asked for a screen share before we built a new CSV format.",
+    "following": 593,
+    "followers": 21800,
+    "joinedAt": "2019-10-01",
+    "verified": false,
+    "metrics": {
+      "replies": 18,
+      "reposts": 25,
+      "likes": 330,
+      "views": 11800
+    }
+  },
+  {
+    "id": "2100000000000000023",
+    "name": "Max Liu",
+    "handle": "max_iterations",
+    "bio": "Builder testing ideas with small, honest prototypes.",
+    "source": "feed",
+    "createdAt": "2026-09-08T09:59:00Z",
+    "body": "Prototype rule: fake the data, not the interaction.\n\nYou can learn a lot from thirty realistic examples and buttons that actually do what they say.",
+    "following": 426,
+    "followers": 11900,
+    "joinedAt": "2020-03-01",
+    "verified": true,
+    "metrics": {
+      "replies": 83,
+      "reposts": 197,
+      "likes": 2237,
+      "views": 146100
+    }
+  },
+  {
+    "id": "2100000000000000024",
+    "name": "Tessa Cole",
+    "handle": "tessa_workbench",
+    "bio": "Designer writing about product and research notes.",
+    "source": "candidate",
+    "createdAt": "2026-09-08T18:47:00Z",
+    "body": "People using ultrawide monitors for research: what layout genuinely helps?\n\nMultiple windows, one dense dashboard, a big document next to source material? I finally have the screen space and keep finding myself with one narrow column in the middle of it.",
+    "following": 250,
+    "followers": 485,
+    "joinedAt": "2021-08-01",
+    "verified": true,
+    "metrics": {
+      "replies": 4,
+      "reposts": 1,
+      "likes": 64,
+      "views": 1260
+    }
+  },
+  {
+    "id": "2100000000000000025",
+    "name": "Arun Blake",
+    "handle": "arun_simplifies",
+    "bio": "Developer making setup and documentation easier.",
+    "source": "feed",
+    "createdAt": "2026-09-08T09:21:00Z",
+    "body": "My definition of a finished prototype: someone else can open it without a call with me.\n\nThat last ten minutes of documentation is part of the product.",
+    "following": 183,
+    "followers": 2570,
+    "joinedAt": "2022-01-01",
+    "verified": false,
+    "metrics": {
+      "replies": 180,
+      "reposts": 348,
+      "likes": 3474,
+      "views": 328200
+    }
+  },
+  {
+    "id": "2100000000000000026",
+    "name": "Mina Ross",
+    "handle": "mina_makes_space",
+    "bio": "Designing for the web. Links, accessibility, and space to think.",
+    "source": "feed",
+    "createdAt": "2026-09-08T09:03:00Z",
+    "body": "Unpopular little design preference: let me open things in a background tab.\n\nIf it looks like a link, I expect it to behave like a link. Middle-click is part of my workflow, not an edge case, and a JavaScript click handler shouldn't take it away.",
+    "following": 912,
+    "followers": 17200,
+    "joinedAt": "2023-06-01",
+    "verified": true,
+    "metrics": {
+      "replies": 38,
+      "reposts": 44,
+      "likes": 558,
+      "views": 18600
+    }
+  },
+  {
+    "id": "2100000000000000027",
+    "name": "Felix Ward",
+    "handle": "felix_tries_things",
+    "bio": "Learning in public through questions and concrete examples.",
+    "source": "candidate",
+    "createdAt": "2026-09-08T08:42:00Z",
+    "body": "What makes you decide a post is worth replying to?\n\nA real question? Something you can add a concrete example to? A person you'd like to know? Working on being a better participant instead of a faster scroller.",
+    "following": 347,
+    "followers": 6400,
+    "joinedAt": "2011-11-01",
+    "verified": false,
+    "metrics": {
+      "replies": 101,
+      "reposts": 169,
+      "likes": 2074,
+      "views": 93200
+    }
+  },
+  {
+    "id": "2100000000000000028",
+    "name": "June Silva",
+    "handle": "june_after_coffee",
+    "bio": "Designer writing about product and research notes.",
+    "source": "feed",
+    "createdAt": "2026-09-08T16:23:00Z",
+    "body": "Best thing I added to my morning routine: ten minutes to follow up on yesterday's conversations before starting new ones.",
+    "following": 250,
+    "followers": 625,
+    "joinedAt": "2012-04-01",
+    "verified": true,
+    "metrics": {
+      "replies": 5,
+      "reposts": 1,
+      "likes": 96,
+      "views": 1740
+    }
+  },
+  {
+    "id": "2100000000000000029",
+    "name": "Oscar Nguyen",
+    "handle": "oscar_checks",
+    "bio": "Engineer writing observable checks for AI agents.",
+    "source": "feed",
+    "createdAt": "2026-09-08T07:58:00Z",
+    "body": "Acceptance criteria are underrated creative tools.\n\n'This works' is hard to design toward. 'I can scan thirty posts, open five, and come back without losing my place' gives you something concrete to build, simplify, and eventually test with another person.",
+    "following": 578,
+    "followers": 36500,
+    "joinedAt": "2013-09-01",
+    "verified": true,
+    "metrics": {
+      "replies": 77,
+      "reposts": 117,
+      "likes": 1248,
+      "views": 52400
+    }
+  },
+  {
+    "id": "2100000000000000030",
+    "name": "Ruby Bell",
+    "handle": "ruby_in_progress",
+    "bio": "Indie developer and founder. Building small automation tools.",
+    "source": "candidate",
+    "createdAt": "2026-09-08T18:11:00Z",
+    "body": "How do you keep useful conversations from getting buried in the feed?\n\nI have bookmarks, notes, and saved messages. Somehow the one I want is always in the fourth place I haven't checked yet.",
+    "following": 250,
+    "followers": 520,
+    "joinedAt": "2014-02-01",
+    "verified": false,
+    "metrics": {
+      "replies": 5,
+      "reposts": 1,
+      "likes": 72,
+      "views": 1380
+    }
+  },
+  {
+    "id": "2100000000000000031",
+    "name": "Samira Fox",
+    "handle": "samira_buildnotes",
+    "bio": "Builder working on recommendations and useful explanations.",
+    "source": "feed",
+    "createdAt": "2026-09-08T06:55:00Z",
+    "body": "We moved the 'why this was recommended' label next to the item instead of hiding it in a tooltip.\n\nPeople didn't just trust the list more. They got better at telling us when the recommendation was wrong, which was the useful part we hadn't anticipated.",
+    "following": 864,
+    "followers": 72800,
+    "joinedAt": "2015-07-01",
+    "verified": true,
+    "metrics": {
+      "replies": 156,
+      "reposts": 312,
+      "likes": 4874,
+      "views": 204200
+    }
+  },
+  {
+    "id": "2100000000000000032",
+    "name": "Drew Lawson",
+    "handle": "drew_on_the_web",
+    "bio": "Web developer. Plain HTML, dependable links, and open standards.",
+    "source": "feed",
+    "createdAt": "2026-09-08T06:12:00Z",
+    "body": "A reminder that the web already has a pretty good 'open this in another tab' component.\n\nIt's called an anchor. Still undefeated.",
+    "following": 295,
+    "followers": 14800,
+    "joinedAt": "2016-12-01",
+    "verified": false,
+    "metrics": {
+      "replies": 46,
+      "reposts": 72,
+      "likes": 905,
+      "views": 33600
+    }
+  },
+  {
+    "id": "2100000000000000033",
+    "name": "Keira Moss",
+    "handle": "keira_learns",
+    "bio": "Designer writing about product and research notes.",
+    "source": "candidate",
+    "createdAt": "2026-09-08T17:35:00Z",
+    "body": "For people building personal AI workflows, what do you still insist on doing manually?\n\nFor me it's sending the final message. Research and sorting are fair game, but I want my actual conversations to sound like something I chose to say, because they are.",
+    "following": 250,
+    "followers": 555,
+    "joinedAt": "2017-05-01",
+    "verified": true,
+    "metrics": {
+      "replies": 6,
+      "reposts": 1,
+      "likes": 80,
+      "views": 1500
+    }
+  },
+  {
+    "id": "2100000000000000034",
+    "name": "Callum Price",
+    "handle": "callum_notebook",
+    "bio": "Writer practicing specific examples and useful replies.",
+    "source": "feed",
+    "createdAt": "2026-09-07T22:40:00Z",
+    "body": "A practical way to improve your writing: reply to a good question with one specific example.\n\nNo grand theory required. Just something you actually tried.",
+    "following": 157,
+    "followers": 4870,
+    "joinedAt": "2018-10-01",
+    "verified": true,
+    "metrics": {
+      "replies": 25,
+      "reposts": 38,
+      "likes": 467,
+      "views": 14900
+    }
+  },
+  {
+    "id": "2100000000000000035",
+    "name": "Anika Stone",
+    "handle": "anika_observes",
+    "bio": "Product designer. Watching people use things before designing more things.",
+    "source": "feed",
+    "createdAt": "2026-09-07T21:15:00Z",
+    "body": "The nice thing about building for yourself first is immediate feedback. The dangerous thing is assuming your shortcuts are obvious to everyone else.\n\nToday's fix was a two-word label. I had been explaining that button in every demo for three weeks.",
+    "following": 1030,
+    "followers": 19600,
+    "joinedAt": "2019-03-01",
+    "verified": false,
+    "metrics": {
+      "replies": 90,
+      "reposts": 210,
+      "likes": 2374,
+      "views": 149200
+    }
+  },
+  {
+    "id": "2100000000000000036",
+    "name": "Rowan West",
+    "handle": "rowan_nextstep",
+    "bio": "Clinical informatics engineer. Builder working on wearable sensors and agent tooling.",
+    "source": "candidate",
+    "createdAt": "2026-09-08T22:26:00Z",
+    "body": "Show me a tiny prototype that changed how you work.\n\nEspecially interested in the scrappy ones: a local page, a spreadsheet with one clever formula, a script you never bothered to package. What problem did it quietly solve?",
+    "following": 275,
+    "followers": 540,
+    "joinedAt": "2020-08-01",
+    "verified": true,
+    "metrics": {
+      "replies": 1,
+      "reposts": 0,
+      "likes": 11,
+      "views": 240
+    }
+  }
+]
