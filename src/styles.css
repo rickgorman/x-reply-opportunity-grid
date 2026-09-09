@@ -1,0 +1,121 @@
+/* Explicit import; every rule is scoped to the component. */
+.x-reply-opportunity-grid {
+  --xrog-text: #e7e9ea;
+  --xrog-muted: #8b9197;
+  --xrog-accent: #1d9bf0;
+  --xrog-card-background: #050505;
+  --xrog-hover-background: #1a1f26;
+  --xrog-best-edge: #3dca8a;
+  --xrog-good-edge: #2f7fc0;
+  --xrog-average-edge: #4b5055;
+  --xrog-gap: 12px;
+  --xrog-radius: 12px;
+  color-scheme: dark;
+  color: var(--xrog-text);
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-synthesis: none;
+  min-width: 0;
+}
+.x-reply-opportunity-grid *,
+.x-reply-opportunity-grid *::before,
+.x-reply-opportunity-grid *::after { box-sizing: border-box; }
+.x-reply-opportunity-grid a { color: inherit; text-decoration: none; }
+.x-reply-opportunity-grid button { font: inherit; }
+.x-reply-opportunity-grid .tweet-grid { display: flex; align-items: flex-start; gap: var(--xrog-gap); }
+.x-reply-opportunity-grid .tweet-col { flex: 1 1 400px; min-width: min(100%, 400px); display: flex; flex-direction: column; gap: var(--xrog-gap); }
+.x-reply-opportunity-grid .tweet-card {
+  --avatar-size: 36px;
+  --content-inset: 56px;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  border: 3px solid var(--opportunity-edge);
+  border-radius: var(--xrog-radius);
+  background: var(--xrog-card-background);
+  transition: border-color .15s, background .15s, box-shadow .15s;
+}
+.x-reply-opportunity-grid .opportunity-best {
+  --opportunity-ink: #7fd4b0;
+  --opportunity-edge: var(--xrog-best-edge);
+  --opportunity-tint: #0f241c;
+  box-shadow:
+    0 0 0 1px rgba(110, 255, 180, 0.55),
+    0 0 7px rgba(80, 255, 160, 0.48),
+    0 0 16px rgba(57, 255, 140, 0.36),
+    0 0 28px rgba(40, 220, 120, 0.2);
+}
+.x-reply-opportunity-grid .opportunity-best:hover {
+  box-shadow:
+    0 0 0 1px rgba(140, 255, 195, 0.7),
+    0 0 9px rgba(100, 255, 175, 0.55),
+    0 0 20px rgba(70, 255, 150, 0.4),
+    0 0 34px rgba(50, 230, 130, 0.24);
+}
+.x-reply-opportunity-grid .opportunity-good { --opportunity-ink: #8ec8f5; --opportunity-edge: var(--xrog-good-edge); --opportunity-tint: #122433; }
+.x-reply-opportunity-grid .opportunity-average { --opportunity-ink: #a0a5aa; --opportunity-edge: var(--xrog-average-edge); --opportunity-tint: #1b1e21; }
+.x-reply-opportunity-grid .tweet-card:hover {
+  background: var(--xrog-hover-background);
+  border-color: color-mix(in srgb, var(--opportunity-edge) 62%, #ffffff);
+}
+.x-reply-opportunity-grid .opportunity-good:hover {
+  box-shadow: 0 0 0 1px rgba(120, 190, 255, 0.28), 0 6px 18px rgba(20, 40, 70, 0.45);
+}
+.x-reply-opportunity-grid .opportunity-average:hover {
+  box-shadow: 0 0 0 1px rgba(180, 190, 200, 0.18), 0 6px 16px rgba(0, 0, 0, 0.55);
+}
+.x-reply-opportunity-grid .card-link { display: block; padding: 14px 12px 0; border-radius: var(--xrog-radius); }
+.x-reply-opportunity-grid .card-link::after { content: ""; position: absolute; inset: 0; border-radius: var(--xrog-radius); }
+.x-reply-opportunity-grid .card-link:focus-visible { outline: none; }
+.x-reply-opportunity-grid .card-link:focus-visible::after { outline: 2px solid var(--xrog-accent); outline-offset: 3px; }
+.x-reply-opportunity-grid .author { display: flex; align-items: flex-start; gap: 8px; min-width: 0; }
+.x-reply-opportunity-grid .avatar { position: relative; width: var(--avatar-size); height: var(--avatar-size); flex: 0 0 var(--avatar-size); display: grid; place-items: center; overflow: hidden; border-radius: 50%; font-size: 0.75em; font-weight: 700; background: #263440; color: #d7e5ef; }
+.x-reply-opportunity-grid .avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.x-reply-opportunity-grid .avatar-1 { background: #36302b; color: #e9d9c8; }
+.x-reply-opportunity-grid .avatar-2 { background: #302d40; color: #ddd7ef; }
+.x-reply-opportunity-grid .avatar-3 { background: #243632; color: #c9e3db; }
+.x-reply-opportunity-grid .avatar-4 { background: #3d2b31; color: #efd4de; }
+.x-reply-opportunity-grid .author-details { display: flex; flex: 1; flex-direction: column; align-items: flex-start; min-width: 0; line-height: 1.4; }
+.x-reply-opportunity-grid .author-identity { display: inline-flex; align-items: center; gap: 3px; min-width: 0; max-width: 100%; }
+.x-reply-opportunity-grid .author-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.875em; font-weight: 700; }
+.x-reply-opportunity-grid .verified-badge { display: inline-flex; flex: 0 0 16px; color: var(--xrog-accent); }
+.x-reply-opportunity-grid .verified-badge svg { width: 16px; height: 16px; }
+.x-reply-opportunity-grid .author-meta { display: inline-flex; gap: 4px; min-width: 0; max-width: 100%; color: var(--xrog-muted); font-size: 0.8125em; }
+.x-reply-opportunity-grid .author-handle { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.x-reply-opportunity-grid .tweet-time { flex-shrink: 0; white-space: nowrap; }
+.x-reply-opportunity-grid .tweet-body { margin: 5px 0 0 44px; color: var(--xrog-text); font-size: 0.9375em; line-height: 1.4; white-space: pre-wrap; overflow-wrap: anywhere; }
+.x-reply-opportunity-grid .expand-button { position: relative; z-index: 1; display: block; margin: 3px 12px 0 var(--content-inset); border: 0; border-radius: 3px; padding: 0; min-height: 24px; background: none; color: var(--xrog-accent); font-size: 0.875em; cursor: pointer; }
+.x-reply-opportunity-grid .expand-button:hover { text-decoration: underline; }
+.x-reply-opportunity-grid .expand-button:focus-visible { outline: 2px solid var(--xrog-accent); outline-offset: 4px; }
+.x-reply-opportunity-grid .account-glance { position: relative; z-index: 1; display: flex; flex-wrap: nowrap; align-items: baseline; gap: 4px; margin: 4px 0 0 44px; max-width: 100%; overflow: hidden; color: var(--xrog-muted); font-size: 0.6875em; line-height: 1.55; }
+.x-reply-opportunity-grid .account-glance > span { flex-shrink: 0; white-space: nowrap; }
+.x-reply-opportunity-grid .account-glance > span:last-child { flex-shrink: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.x-reply-opportunity-grid .account-glance strong { color: #a6aaae; font-weight: 600; }
+.x-reply-opportunity-grid .opportunity-score { position: relative; z-index: 1; flex: 0 0 auto; align-self: flex-start; margin: 0 0 0 auto; padding: 1px 7px; border: 1px solid var(--opportunity-edge); border-radius: 999px; background: var(--opportunity-tint); color: var(--opportunity-ink); font-size: 0.6875em; font-weight: 600; line-height: 1.6; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.x-reply-opportunity-grid .tweet-metrics { display: flex; justify-content: space-between; gap: 5px; margin: 13px 12px 0 var(--content-inset); color: var(--xrog-muted); }
+.x-reply-opportunity-grid .metric { display: inline-flex; align-items: center; gap: 4px; min-width: 0; font-size: 0.6875em; line-height: 1.5; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.x-reply-opportunity-grid .metric svg { width: 15px; height: 15px; flex-shrink: 0; }
+.x-reply-opportunity-grid .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 11px 12px 0 var(--content-inset); padding: 9px 0 12px; border-top: 1px solid #202327; font-size: 0.625em; }
+.x-reply-opportunity-grid .source-badge { display: inline-flex; align-items: center; gap: 5px; color: var(--xrog-muted); }
+.x-reply-opportunity-grid .source-badge::before { content: ""; height: 4px; width: 4px; background: currentColor; border-radius: 50%; }
+.x-reply-opportunity-grid .source-candidate { color: var(--xrog-accent); }
+.x-reply-opportunity-grid .visit-status { color: var(--xrog-muted); white-space: nowrap; }
+.x-reply-opportunity-grid .tweet-card.is-visited { --opportunity-ink: #71767b; --opportunity-edge: #30353a; --opportunity-tint: #111315; background: #030303; border-color: #202327; box-shadow: none; }
+.x-reply-opportunity-grid .tweet-card.is-visited .tweet-body { color: #71767b; }
+.x-reply-opportunity-grid .tweet-card.is-visited .author-name { color: #8b9095; }
+.x-reply-opportunity-grid .tweet-card.is-visited .avatar { opacity: .5; filter: grayscale(1); }
+.x-reply-opportunity-grid .tweet-card.is-visited .verified-badge, .x-reply-opportunity-grid .tweet-card.is-visited .source-badge { color: var(--xrog-muted); }
+.x-reply-opportunity-grid .tweet-card.is-visited:hover { background: #14171a; border-color: #7a8792; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5); }
+
+.x-reply-opportunity-grid .tweet-body-wrap { position: relative; overflow: hidden; margin: 5px 0 0 44px; }
+.x-reply-opportunity-grid .tweet-body { margin: 0; }
+.x-reply-opportunity-grid .tweet-measure { position: absolute; top: 0; left: 0; width: 100%; visibility: hidden; pointer-events: none; }
+.x-reply-opportunity-grid .storage-notice,
+.x-reply-opportunity-grid .empty-state { margin: 0 0 16px; padding: 16px; border: 1px solid var(--xrog-average-edge); border-radius: var(--xrog-radius); color: var(--xrog-text); font-size: .875em; }
+.x-reply-opportunity-grid .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.x-reply-opportunity-grid .tweet-card:focus-within { background: var(--xrog-hover-background); }
+@media (prefers-reduced-motion: reduce) {
+  .x-reply-opportunity-grid .tweet-card { transition: none; }
+}

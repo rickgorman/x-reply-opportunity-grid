@@ -8,6 +8,8 @@ server.log
 server.pid
 session-diag.txt
 node_modules/
-dist/
 .turbo/
 *.tgz
+demo-dist/
+.vite/
+coverage/
