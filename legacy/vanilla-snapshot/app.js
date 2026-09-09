@@ -120,7 +120,9 @@ function readVisited() {
 }
 
 function updateRemaining() {
-  document.querySelector('#remaining-count').textContent = tweets.filter(tweet => !visited[tweet.id]).length;
+  const el = document.querySelector('#remaining-count');
+  if (!el) return;
+  el.textContent = tweets.filter(tweet => !visited[tweet.id]).length;
 }
 
 function updateCard(card, id) {
